@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  fetch('https://farmer-market-wnfy.onrender.com/items')
+  fetch('https://backend-ax01.onrender.com/items')
       .then(response => response.json())
       .then(data => {console.log(data);
         const itemContainer = document.querySelector('.item-container');
