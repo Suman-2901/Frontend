@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Market</title>
+    <link rel="stylesheet" href="product_page.css">
+</head>
+<body>
+    <header>
+        <div><h1>Farmers Market</h1></div>
+    </header>
+    <div id="navi">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product_page.html">Items</a></li>
+                <li><a href="#items">Compare</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;
+            </div>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search items...">
+        </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="product_page.html">Items</a>
+        <a href="#compare">Compare</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <section id="items">
+        <h2>Items List</h2>
+        <div class="item-container">
+        
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Farmers Market Portal. All rights reserved.</p>
+    </footer>
+    <script src="Data.js"></script>
+    <script src="product_page.js"></script>
+</body>
+</html>
