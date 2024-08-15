@@ -94,3 +94,79 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/* --------------------------login form----------------------- */
+#loginForm{
+    display: none;
+}
+.login-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form-content {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 400px;
+}
+.login-form h2 {
+    margin-top: 0;
+}
+.form {
+    margin-bottom: 15px;
+}
+.form label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.form button:disabled {
+    background-color: #aaa;
+}
+.message {
+    color: red;
+    margin-top: 10px;
+}
+.toggle-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.toggle-button:hover {
+    background-color: #218838;
+}
+.navbar .toggle-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.navbar .toggle-button:hover {
+    background-color: #218838;
+}
