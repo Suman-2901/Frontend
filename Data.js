@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+  function test(){
+    const preloader = document.querySelector('.preloader');
+    const itemContainer = document.querySelector('.item-container');
+    preloader.style.display = 'flex';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        itemContainer.style.display = 'flex';
+    }, 1000);
+    
+  }
   fetch('https://backend-ax01.onrender.com/items')
       .then(response => response.json())
       .then(data => {console.log(data);
@@ -27,5 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
           itemDiv.appendChild(itemloc);
           itemContainer.appendChild(itemDiv);
         });
+        test();
 }).catch(error => console.error('Error fetching items:', error));
 });

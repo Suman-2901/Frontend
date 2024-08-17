@@ -46,3 +46,10 @@ function handleClickOutside(event) {
         closeSidebar();
     }
 }
+// -------------Loader----------------------
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        const preloader_txt = document.querySelector('.preloader__msg');
+        preloader_txt.innerHTML="Testing";
+    },2000);
+});
