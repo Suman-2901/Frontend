@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   }
   fetch('https://backend-ax01.onrender.com/items')
+  // fetch('http://localhost:3000/items')
       .then(response => response.json())
       .then(data => {console.log(data);
         const itemContainer = document.querySelector('.item-container');

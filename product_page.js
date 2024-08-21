@@ -50,6 +50,6 @@ function handleClickOutside(event) {
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const preloader_txt = document.querySelector('.preloader__msg');
-        preloader_txt.innerHTML="Testing";
-    },2000);
+        preloader_txt.innerHTML="This is taking long. Something’s wrong.";
+    },4000);
 });
