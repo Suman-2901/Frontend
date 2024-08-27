@@ -51,5 +51,5 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         const preloader_txt = document.querySelector('.preloader__msg');
         preloader_txt.innerHTML="This is taking long. Something’s wrong.";
-    },4000);
+    },30000);
 });

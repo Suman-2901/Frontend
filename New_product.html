@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New product</title>
+    <link rel="stylesheet" href="New_product.css">
+</head>
+<body>
+    <div class="container">
+        <button class="close-button">&times;</button>
+        <h1>List your Product</h1>
+        
+        <form id="productForm">
+            <label for="category">Choose a category:</label>
+            <select id="category" name="category">
+                <option value="" selected>Select</option>
+            </select>
+            
+            <div class="hidden-field">
+                <label for="product">Product:</label>
+                <div style="position: relative;">
+                    <input type="text" id="product" name="product" placeholder="Search Product">
+                    <div id="suggestions" class="suggestions"></div>
+                </div>
+            </div>
+            <div class="hidden-field" style="position: relative;">
+                <input type="text" id="quantity" name="quantity" placeholder="Quantity">
+            </div>
+            <div class="hidden-field" style="position: relative;">
+                <input type="text" id="price" name="price" placeholder="Price">
+            </div>
+            <div class="hidden-field" style="position: relative;">
+                <input type="text" id="loc" name="loc" placeholder="Location">
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script src="New_product.js"></script>
+</body>
+</html>

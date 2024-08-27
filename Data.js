@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   fetch('https://backend-ax01.onrender.com/items')
   // fetch('http://localhost:3000/items')
       .then(response => response.json())
-      .then(data => {console.log(data);
+      .then(data => {
         const itemContainer = document.querySelector('.item-container');
         itemContainer.innerHTML = '';
         data.forEach(item => {
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
           const itemName = document.createElement('h3');
           itemName.textContent = item.p_name;
           const itemSpecification = document.createElement('p');
-          itemSpecification.textContent = `Specification: ${item.specs}`;
+          itemSpecification.textContent = `Quantity: ${item.quantity}`;
           const itemRate = document.createElement('p');
-          itemRate.textContent = `Rate: ${item.cost}`;
+          itemRate.textContent = `Rate: ${item.price}`;
           const itemloc = document.createElement('p');
           itemloc.textContent=item.loc;
           itemDiv.appendChild(itemImage);
