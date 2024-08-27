@@ -13,13 +13,21 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('https://backend-ax01.onrender.com/products')
     .then(response => response.json())
     .then(data => {
-        data.forEach(item=>{
+        const uniqueCategories = new Set();
+        data.forEach(item => {
+            uniqueCategories.add(item.category);
+        });
+        uniqueCategories.forEach(category=>{
             const option=document.createElement('option');
-            option.innerHTML=item.category;
-            option.value=item.category;
+            option.innerHTML=category;
+            option.value=category;
             categorySelect.appendChild(option);
         });
         products=data;
+
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
     });
 
 
