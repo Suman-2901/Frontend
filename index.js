@@ -24,31 +24,70 @@ setInterval(() => {
     moveSlide(1);
 }, 3000);
 // --------------------------------------login----------------------------------
-document.getElementById('loginButton').addEventListener('click', function() {
-    document.getElementById('loginForm').style.display = 'flex'; // Use flex display
-    document.getElementById('loginForm').style.zIndex=1001;
+const logb=document.getElementById('loginButton');
+const logform=document.getElementById('loginForm');
+const ph=document.getElementById("phone");
+const otpbtn=document.getElementById('sendOtpButton');
+const password=document.getElementById('password');
+const sublogbtn=document.getElementById('submitLoginButton')
+const msg=document.getElementById('message');
+
+logb.addEventListener('click', function() {
+    logform.style.display = 'flex';
+    logform.style.zIndex=1001;
 });
-document.getElementById('closeLoginForm').addEventListener('click', function() {
-    document.getElementById('loginForm').style.display = 'none';
+//check ph-no.
+const digitPattern = /^\d+$/;
+ph.addEventListener('input',function(){
+    if (!digitPattern.test(ph.value)) {
+        ph.value=ph.value.slice(0, -1);
+    }
 });
 
-document.getElementById('sendOtpButton').addEventListener('click', function() {
+otpbtn.addEventListener('click', function() {
     // Simulate sending OTP
-    document.getElementById('message').textContent = 'OTP sent to phone number.';
-    document.getElementById('submitLoginButton').disabled = false;
+    // document.getElementById('message').textContent = 'OTP sent to phone number.';
+    if(ph.value>999999999){
+        ph.disabled=true;
+        otpbtn.style.display="none";
+        password.style.display="block";
+        sublogbtn.style.display="block";
+        msg.textContent ="";
+    }
+    else{
+        msg.textContent ="invalid number";
+    }
+    
+});
+
+function reset(){
+    ph.value="";
+    ph.disabled=false;
+    msg.textContent ="";
+    otpbtn.style.display="block";
+    password.style.display="none";
+    password.value="";
+    sublogbtn.style.display="none";
+}
+
+document.getElementById('closeLoginForm').addEventListener('click', function() {
+    logform.style.display = 'none';
+    reset();
+    
 });
 
 document.getElementById('submitLoginButton').addEventListener('click', function() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const phone = document.getElementById('phone').value;
-    const otp = document.getElementById('otp').value;
+    // const username = document.getElementById('username').value;
+    // const password = document.getElementById('password').value;
+    // const phone = document.getElementById('phone').value;
+    // const otp = document.getElementById('otp').value;
 
-    // Normally, here you would send this data to your server for verification
-    if (username && password && phone && otp) {
-        document.getElementById('message').textContent = 'Logging in...';
-        // Include real verification logic here
-    } else {
-        document.getElementById('message').textContent = 'Please fill out all fields.';
-    }
+    // // Normally, here you would send this data to your server for verification
+    // if (username && password && phone && otp) {
+    //     msg.textContent = 'Logging in...';
+    //     // Include real verification logic here
+    // } else {
+    //     msg.textContent = 'Please fill out all fields.';
+    // }
+    msg.textContent = 'Please fill out all fields.';
 });

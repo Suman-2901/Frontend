@@ -32,22 +32,25 @@
             <button class="next" onclick="moveSlide(1)">❯</button>
         </div>
     </section>
+
+
     <div id="loginForm" class="login-form">
         <div class="login-form-content">
             <h2>Login</h2>
             <div class="form">
                 <label for="phone">Phone Number</label>
-                <input type="text" id="phone" name="phone" required>
+                <input type="tel"  id="phone" name="phone" maxlength="10" required>
             </div>
             <div class="form">
-                <button id="sendOtpButton">Send OTP</button>
+                <button id="sendOtpButton">Login/SignUp</button>
             </div>
-            <div class="form">
-                <label for="otp">OTP</label>
+            <div class="form" id="password">
+                <!-- <label for="otp">OTP</label> -->
+                <label for="otp">password</label>
                 <input type="text" id="otp" name="otp">
             </div>
             <div class="form">
-                <button id="submitLoginButton" disabled>Login</button>
+                <button id="submitLoginButton">Login</button>
             </div>
             <div id="message" class="message"></div>
             <button id="closeLoginForm" class="toggle-button">Close</button>

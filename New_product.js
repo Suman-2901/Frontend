@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 alert('Form submitted successfully!');
+                window.location.href="index.html";
             } else {
                 alert('Failed to submit the form.');
             }

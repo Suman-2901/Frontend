@@ -118,8 +118,8 @@ section {
     object-fit: cover;
 }
 .cat h3 {
-    margin-top: 10px; /* Add some space between the image and the item name */
-    text-align: center; /* Center the item name */
+    margin-top: 10px; 
+    text-align: center; 
 }
 footer {
     background-color: rgb(24, 47, 24);
@@ -145,6 +145,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#password,#submitLoginButton{
+    display: none;
 }
 .login-form-content {
     background-color: white;
